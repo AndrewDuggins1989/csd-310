@@ -1,0 +1,31 @@
+#Importing  MongoClient module from pymongo
+from pymongo import MongoClient
+
+#Url for Stablishing connection
+url = "mongodb+srv://admin:admin@cluster0.71xpc.mongodb.net/pytech"
+
+# Connecting to MongoDB server
+client = MongoClient(url)
+
+# Connecting to the database named
+# pytech
+db = client.pytech
+
+# Getting the names of all the collections
+# in pytech Database.
+collections = db.list_collection_names()
+
+# Printing the name of the collections to the console.
+print("-- Pytech Collection List --")
+print(collections)
+
+#Getting input from user to exit the program
+a = input("End of program, press any key to exit...")
+
+from pymongo import MongoClient
+
+client = MongoClient(url)
+
+db = client.pytech
+
+db.collection_names()
