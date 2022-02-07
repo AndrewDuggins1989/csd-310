@@ -1,0 +1,43 @@
+from pymongo import MongoClient
+url = "mongodb+srv://admin:admin@cluster0.71xpc.mongodb.net/pytech"
+
+client = MongoClient(url)
+
+db = client.pytech
+
+db.collection_names()
+first_name=()
+last_name=()
+student_id=(int)
+student=(int)
+
+db.insertOne({})
+first_name: "fred"
+last_name: "dupree"
+student_id:1007
+
+db.insertOne({})
+first_name: "drew"
+last_name: "dupree"
+student_id:1008
+
+db.insertOne({})
+first_name: "brittany"
+last_name: "dupree"
+student_id:1009
+
+
+
+student_id = student.insert_one({}).inserted_id
+ 
+print(student_id)
+
+docs = db.collection_name.find({})
+ 
+for doc in docs:
+ print(doc)
+ 
+db.find_one()
+doc = db.collection_name.find_one({student_id: 1007})
+ 
+print(doc[student_id])
